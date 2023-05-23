@@ -125,7 +125,7 @@ header{
 /* --------------------- MEDIA QUERIES ----------------------------------- */
 
 /* primeira resolução abrange telas menores, adequando duas colunas de card */
-@media (min-width: 1024px) and (max-width: 1550px){
+@media (min-width: 1024px) and (max-width: 1450px){
 
     /* Habilitando o menu */
     #menu{ display: initial; }
