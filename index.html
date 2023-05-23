@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Jimar Castro">
+    <meta name="description" content="Reprodução de site de streaming mostrado em aula">
+    <link rel="icon" href="./img/y-play.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/section-2.css"/>
+    <link rel="stylesheet" href="./css/section-3.css"/>
+    <link rel="stylesheet" href="./css/section-4.css"/>
+    <link rel="stylesheet" href="./css/section-5.css"/>
+    <title>Pop Movies</title>
+</head>
+<body>
+
+    <header>                        <!--Menu de navegação-->
+        <i id="menu" class="material-symbols-outlined" onclick="clickMenu()">menu</i>         <!--icone de menu do google com js-->
+
+        <h1 style="cursor: default; flex-wrap: nowrap;">POP FILMES</h1>
+        <img src="./img/logo_gif.gif" id="logo">
+
+        <nav id="lista">
+            <ul class="navegacao">
+                <li class="page active"> <a href="#"> Home </a> </li>
+                <li class="page"><a href="#descubra"> descubra </a> </li>
+                <li class="page"><a href="#categorias"> categorias </a> </li>
+                <li class="page"><a href="#price">preços</a></li>
+                <li class="page"><a href="#sobre">sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>                          <!--Onde fica o grid de filmes-->
+
+        <h3 id="alta">Estes são os filmes e séries em alta no momento, assista-os ou clique em "descubra" para mais conteúdo</h3>
+
+        <section class="cards">
+
+            <div id="filme-1" style="background-image: url('./img/aquaman.jpeg'); background-size: cover;">
+            </div>
+
+            <div id="filme-2" style="background-image: url('./img/avatar.jpeg'); background-size: cover;"> 
+            </div>
+
+            <div id="filme-3" style="background-image: url('./img/f-anim.jpg'); background-size: cover;">
+            </div>
+
+            <div id="filme-4" style="background-image: url('./img/got.jpg'); background-size: cover;">
+            </div>
+
+            <div id="filme-5" style="background-image: url('./img/harryPotter.jpeg'); background-size: cover;">
+            </div>
+
+            <div id="filme-6" style="background-image: url('./img/rbw.jpg'); background-size: cover;">
+            </div>
+
+        </section>
+    </main>
+
+    <section class="descubra" id="descubra">    <!--Essa sessão substitui a de "Principais características"-->
+        <div class="colunas"> 
+            <section class="caract">
+                <div>
+                    <h2>Versatilidade</h2>
+                    <p>Acesse nosso site em qualquer dispositivo com a renderação em tela adequada para cada um deles.</p>
+                </div>
+            
+                <div>
+                    <h2>Imersivo</h2>
+                    <p>Efeitos de áudio e imagem modernos para uma experiência imersiva dentro da plataforma.</p>
+                </div>
+            
+                <div>
+                    <h2>Simplicidade</h2>
+                    <p>Cadastre-se para salvar filmes e séries na sua biblioteca pessoal, avalie-os e comente na comunidade Pop Filmes!</p>
+                </div>
+            </section>
+
+            <section class="cadastro">
+                <form method="post" autocomplete="on">
+                    <img src="./img/logo_gif.gif" />
+                    <label>Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required/>
+                    <label>E-mail</label>
+                    <input type="email" name="email" placeholder="email@email.com" required/>
+
+                    <nav>
+                        <button id="reset" type="reset">Apagar</button>
+                        <button id="submit" type="submit" onclick="alerta()">Cadastrar</button>
+                    </nav>
+                </form>
+            </section>
+        </div>
+    </section>
+
+    <section class="categorias" id="categorias"> <!--Essa sessão engloba "Filmes" e "Séries"-->
+        <nav class="categorias-menu">
+            <input id="barra-pesquisa" type="text" placeholder="Busque por um filme ou série"/>
+            <span class="material-symbols-outlined" id="search-icon"> search </span>
+        </nav>
+
+        <nav>
+            <ul id="alfabeto">
+                <li><h3>A</h3></li>
+                <li><h3>B</h3></li>
+                <li><h3>C</h3></li>
+                <li><h3>D</h3></li>
+                <li><h3>E</h3></li>
+                <li><h3>F</h3></li>
+                <li><h3>G</h3></li>
+                <li><h3>H</h3></li>
+                <li><h3>I</h3></li>
+                <li><h3>J</h3></li>
+                <li><h3>K</h3></li>
+                <li><h3>L</h3></li>
+                <li><h3>M</h3></li>
+                <li><h3>N</h3></li>
+                <li><h3>O</h3></li>
+                <li><h3>P</h3></li>
+                <li><h3>Q</h3></li>
+                <li><h3>R</h3></li>
+                <li><h3>S</h3></li>
+                <li><h3>T</h3></li>
+                <li><h3>U</h3></li>
+                <li><h3>V</h3></li>
+                <li><h3>W</h3></li>
+                <li><h3>X</h3></li>
+                <li><h3>Y</h3></li>
+                <li><h3>Z</h3></li>
+            </ul>
+        </nav>   
+
+        <div class="top">
+            <h2>Em alta no momento</h2>
+            <div class="film-cards">
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+            </div>
+        </div>
+
+        <div class="best">
+            <h2>Melhores avaliações Pop</h2>
+            <div class="film-cards">
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+            </div>
+        </div>
+
+        <div class="drama">
+            <h2>Drama</h2>
+            <div class="film-cards">
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+            </div>
+        </div>
+
+        <div class="romance">
+            <h2>Romance</h2>
+            <div class="film-cards">
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+            </div>
+        </div>
+
+        <div class="acao">
+            <h2>Ação</h2>
+                <div class="film-cards">
+                    <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                    <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                    <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                    <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                    <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                </div>
+        </div>
+
+        <div class="aventura">
+            <h2>aventura</h2>
+            <div class="film-cards">
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+                <img src="./img/card.gif" id="blank-card" title="conexão instável, aguarde o carregamento"/>
+            </div>
+        </div>
+    </section>
+
+    <section class="price" id="price">
+        <div id="semanal">
+            <h3>por apenas</h3>
+            <h2 class="valor"> 10,00 </h2>
+            <p>Você garante entretenimento para você e sua família, com flexibilidade e preço que cabem no bolso</p>
+            <button onclick="alerta()">Assinar</button>
+        </div>
+        
+        <div id="mensal">
+            <h3>com</h3>
+            <h2 class="valor"> 30,00 </h2>
+            <p>Você mantém a diversão garantida, sem se preocupar durante o mês inteiro</p>
+            <button onclick="alerta()">Assinar</button>
+        </div>
+
+        <div id="anual">
+            <h3>com desconto</h3>
+            <h2 class="valor"> 300,00 </h2>
+            <p>A promoção que você esperava! Faça o plano anual e garanta o desconto e diversão</p>
+            <button onclick="alerta()">Assinar</button>
+        </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <div id="resenha">
+            <h2>Propósito</h2>
+            <p>
+                Esse projeto "Pop Filmes" tem como propósito replicar ferramentas visuais
+                mostradas em aula, da disciplina Aplicações para Web, onde o professor
+                apresentou um modelo de site de streaming de filmes e séries e pediu que
+                cada aluno fizesse um site no mesmo intuito.
+            </p>
+        </div>
+    </section>
+
+    <script src="./js/main.js"></script> <!-- script para o botao menu, sessao de pagina selecionada e alerta de cadastro -->
+</body>
+</html>

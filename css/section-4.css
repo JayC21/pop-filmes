@@ -1,0 +1,54 @@
+.price{ 
+    width: 100vw; 
+    height: 100vh; 
+    padding-top: 5vh; 
+    flex-direction: row; 
+    align-items: center; 
+    display: inline-flex; 
+    justify-content: space-evenly; 
+}
+
+.price div{
+    margin: 10px;
+    color: white;
+    width: 33.33%;
+    height: 500px;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: linear-gradient(120deg, rgb(0, 51, 255), rgb(1, 1, 59));
+}
+
+/* ajustando fonte dos textos dos cards dos planos disponíveis */
+.price p { font-size: 1.5em; padding: 25px;}
+.price h2{ font-size: 5em; color: rgb(224, 202, 3); text-transform: uppercase; }
+.price h3{ font-size: 3em; text-transform: uppercase; }
+#anual h3{ color: red; text-shadow: 1px 1px 4px white; }
+
+.price button{
+    padding: 5px;
+    border: none;
+    font-size: 1em;
+    margin: 0 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: red;
+    transition: 300ms ease-in-out;
+}
+
+.price button:hover{ background-color: darkred; box-shadow: 1px 1px 1px 3px white; }
+
+
+/* --------------------- MEDIA QUERIES ----------------------------------- */
+
+@media (min-width: 1024px) and (max-width: 1550px){
+    .price div{ width: 80%}
+    .price{ flex-direction: column; height: 100%; }
+}
+
+@media (min-width: 400px) and (max-width: 1024px){
+    .price div{ width: 70%}
+    .price{ flex-direction: column; height: 100%; }
+}

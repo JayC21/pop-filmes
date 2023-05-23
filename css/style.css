@@ -1,0 +1,204 @@
+*{
+    font-family: "Roboto";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: linear-gradient(rgb(0, 0, 0), rgb(1, 0, 20));
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* header e menu de navegação */
+
+header{
+    top: 0;
+    height: 5vh;
+    width: 100%;
+    padding: 0 10%;
+    color: white;
+    z-index: 2;
+    position: fixed;
+    align-items: center;
+    display: inline-flex;
+    justify-content: flex-start;
+    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, 0.2));
+}
+
+#logo{
+    height: 4vh;
+    margin: 1vh 30px;
+}
+
+#menu{
+    top: 15px;
+    right: 20px;
+    display: none;
+    color: white;
+    position: absolute;
+}
+
+#menu:hover{
+    cursor: pointer;
+}
+
+.navegacao{
+    gap: 10px;
+    z-index: 2;
+    list-style: none;
+    margin-left: 20vw;
+    font-size: 1.5rem;
+    flex-direction: row;
+    display: inline-flex;
+    text-transform: uppercase;
+    justify-content: space-evenly;
+    transition: all ease-in-out 300ms;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navegacao .page.active{
+    text-decoration: overline;
+    color: yellow;
+}   /* estilização de acordo com o script para sessão selecionada no header*/
+
+.navegacao li a{
+    color: white;
+    text-decoration: none;
+    transition: all ease-in-out 300ms;
+}
+
+.navegacao li a:hover{
+    cursor: pointer;
+    color: yellow;
+}
+
+
+/* 1a sessão: "Cards" é a classe que divide as colunas e linhas dos filmes em cards */
+.cards{
+    width: 90vw;
+    height: 90vh;
+    padding: 50px;
+    display: grid;
+    grid-gap: 50px;
+    margin: 5vh 5vw;
+    justify-items: center;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cards div{
+    width: 1fr;
+    height: 300px;
+    padding: 1px 1px;
+    min-width: 400px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: gray;
+    border: 1px solid yellow;
+    transition: 1s ease-in-out;
+}
+
+.cards div:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.cards img{
+    max-width: 90%;
+    min-width: 180px;
+    min-height: 300px;
+    margin-bottom: 10px;
+}
+
+#alta{
+    color: tan;
+    font-size: larger;
+    text-align: center;
+    margin: 80px 20px 0;
+}
+
+
+
+/* --------------------- MEDIA QUERIES ----------------------------------- */
+
+/* primeira resolução abrange telas menores, adequando duas colunas de card */
+@media (min-width: 1024px) and (max-width: 1550px){
+
+    /* Habilitando o menu */
+    #menu{ display: initial; }
+
+    .navegacao{
+        display: inline-flex;
+        flex-direction: row;
+        position: absolute;
+        left: 200px;
+        top: 1.5vh;
+    }   /* Aqui o menu ainda é em linha para navegação*/
+
+    body{ overflow-y: scroll; }
+
+
+    /*abaixo fica a responsividade dos cards*/
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: 100%;
+    }
+
+    .cards div{ width: 400px; }
+
+    .cards img{
+        min-width: 180px;
+        min-height: 400px;
+    } 
+}
+
+/* A segunda resolução abrange desde tablet à smartphones, coluna unica de conteudo e menu vertical */
+@media (min-width: 400px) and (max-width: 1024px){
+
+    body{ overflow-y: scroll; }
+
+    header{ justify-content: center; } /* ajustando o header */
+
+    /* Habilitando o menu */
+    #menu{
+        display: initial;
+        right: 50px;
+        z-index: 3;
+    }
+
+    .navegacao{
+        top: 0;
+        margin-right: -30px;
+        gap: 20px;
+        right: 30px;
+        height: 100vh;
+        position: absolute;
+        padding: 80px 15px;
+        text-align: center;
+        justify-content:start;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    /*abaixo fica a responsividade dos cards*/
+    .cards{
+        height: 100%;
+        min-width: 350px;
+        justify-content: center;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .cards div{
+        width: 60vw;
+    }
+
+    .cards img{
+        width: 100%;
+    } 
+}

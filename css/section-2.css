@@ -1,0 +1,91 @@
+/* 2a sessão: "Descubra" que conterá o chamativo para inscrição no site, além do que o usuário encontrará nele */
+
+.descubra{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url(../img/filmes.png);
+    
+}
+
+.colunas{
+    height: 95vh;
+    width: 100vw;
+    margin-top: 5vh;
+    align-items: center;
+    flex-direction: row;
+    display: inline-flex;
+}
+
+/* caract, abreviação da sessão de características, a esquerda do formulario de cadastro */
+.caract{ width: 50%; flex-direction: column; }
+
+.caract div{
+    margin: 30px ;
+    padding: 30px;
+    display: block;
+    border-radius: 20px;
+    transition: all ease-in-out 300ms;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.caract div:hover{ background-color: #fff; }
+
+.caract div:hover p, .caract div:hover h2{ color: black; }
+
+.caract p{ color: yellow; }
+
+.caract h2{ color: white; margin-bottom: 5px;}
+
+
+/* sessão do formulario de cadastro */
+.cadastro{ width: 50%; }
+
+.cadastro form img{ 
+    width: 160px; 
+    margin-bottom: 20px; 
+    background-color: tan; 
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.cadastro form{
+    height: 500px;
+    width: 90%;
+    padding: 10px;
+    border: 3px dashed red;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 254, 254, 0.7)
+}
+
+.cadastro label{ margin: 10px 0 5px; font-size: 32px;}
+.cadastro input{ height: 30px; width: 50%; margin-bottom: 10px; border-radius: 5px; padding: 5px;}
+
+.cadastro button{
+    padding: 5px;
+    border: none;
+    margin: 15px;
+    width: 150px;
+    color: white;
+    font-size: 16px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.cadastro #reset{ background-color: red;}
+
+.cadastro #submit{ background-color: green; }
+
+
+/* medias queries para responsividade */
+
+@media (min-width: 1024px) and (max-width: 1550px){
+    .cadastro button{ width: 80px; }
+}
+
+@media (min-width: 400px) and (max-width: 1024px){
+    .cadastro input{ width: 90%; margin: 0 5%}
+    .cadastro button{  font-size: 16px; padding: 2px; width: 90%; margin: 10px auto}
+}
